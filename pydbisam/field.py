@@ -25,6 +25,7 @@ class FieldType(int, Enum):
     TIMESTAMP = (11, 8)
 
     CURRENCY = (5383, 8)
+    BCD = (5635, 8)
     AUTOINCREMET = (7430, 4)
 
     def __new__(cls, type_id, size):
@@ -141,7 +142,7 @@ class Field:
             ts -= datetime.timedelta(days=1)
 
             return ts
-        elif self._type is FieldType.CURRENCY:
+        elif self._type is FieldType.CURRENCY or self._type is FieldType.BCD:
             return struct.unpack("<d", field_data)[0]
         elif self._type is FieldType.AUTOINCREMET:
             return struct.unpack("<I", field_data)[0]

@@ -50,6 +50,7 @@ Datatypes
 | 7  | Double    | 8 | IEEE-754  |
 | 11 | Timestamp | 8 | IEEE-754, milliseconds since [AD 1, Jan 0](https://en.wikipedia.org/wiki/List_of_non-standard_dates#January_0) |
 | 5383 | Currency | 8 | IEEE-754  |
+| 5635 | BCD | 8 | Binary Coded Decimal (IEEE-754)  |
 | 7430 | Autoincrement | 4 | Int  |
 
 
